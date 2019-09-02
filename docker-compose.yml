@@ -1,0 +1,16 @@
+# ymlのバージョン
+version: '3'
+
+
+#コンテナサービスを指定
+services:
+    # golang(任意の名前)のサービスを作成
+  golang:
+    #同一フォルダにある Dockerfile をビルドする
+  build: .
+  # 外部ポートと接続（外部ポート:dockerポート）
+  ports:
+      - "8080:8080"
+  # コンテナ名を指定(任意の名前)
+  container_name: golangtest
+  
